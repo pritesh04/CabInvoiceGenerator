@@ -17,4 +17,11 @@ public class CabInvoiceGeneratorTest {
 		double rate=canInvoice.calculateFare(10, 5);
 		Assert.assertEquals(125, rate,0.0);
 	}
+	@Test
+	public void givenDistanceTime_SHouldReturn_MinFare()
+	{
+		CanInvoice canInvoice= new CanInvoice();
+		double rate=canInvoice.calculateFare(0.2, 5);
+		Assert.assertEquals(5, rate,0.0);
+	}
 }
