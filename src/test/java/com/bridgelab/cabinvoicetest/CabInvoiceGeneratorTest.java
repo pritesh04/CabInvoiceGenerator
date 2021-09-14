@@ -29,9 +29,9 @@ public class CabInvoiceGeneratorTest {
 	public void givenDistanceTime_SHouldReturn_AverageFare() {
 		CanInvoice canInvoice = new CanInvoice();
 		Ride[] ride = { new Ride(2, 5), new Ride(0.1, 1) };
-		Double fare = canInvoice.calculateAverageFare(ride);
-		//InVoiceGenerator expected = new InVoiceGenerator(2, 50);
-		Assert.assertEquals(50, fare,0.0);
+		InVoiceGenerator summary = canInvoice.calculateAverageFare(ride);
+		InVoiceGenerator expected = new InVoiceGenerator(2, 50);
+		Assert.assertEquals(summary, expected);
 	}
 
 

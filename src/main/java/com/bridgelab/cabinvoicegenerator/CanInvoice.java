@@ -24,12 +24,12 @@ public class CanInvoice {
 		return minFare;
 	}
 
-	public double calculateAverageFare(Ride[] ride) {
+	public InVoiceGenerator calculateAverageFare(Ride[] ride) {
 		double averageFare = 0;
 		for (Ride ride2 : ride) {
 			averageFare = averageFare + this.calculateFare(ride2.distance, ride2.time);
 		}
-		return averageFare;
+		return new InVoiceGenerator(ride.length	, averageFare);
 
 	}
 
