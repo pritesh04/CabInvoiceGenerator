@@ -34,5 +34,11 @@ public class CabInvoiceGeneratorTest {
 		Assert.assertEquals(summary, expected);
 	}
 
-
+	@Test
+	public void showDeatils() {
+		CanInvoice canInvoice = new CanInvoice();
+		Ride[] ride = { new Ride(2, 5), new Ride(0.1, 1) };
+		InVoiceGenerator summary = canInvoice.calculateAverageFare(ride);
+		canInvoice.showDetails();
+	}
 }

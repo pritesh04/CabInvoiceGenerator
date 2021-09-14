@@ -6,7 +6,7 @@ public class InVoiceGenerator {
 	public double averageFare;
 
 	public InVoiceGenerator(int noOfRides, double totalFare) {
-		super();
+
 		this.noOfRides = noOfRides;
 		this.totalFare = totalFare;
 		this.averageFare = noOfRides / totalFare;
@@ -34,7 +34,5 @@ public class InVoiceGenerator {
 	public String toString() {
 		return "InVoiceGenerator [noOfRides=" + noOfRides + ", totalFare=" + totalFare + "]";
 	}
-	
-	
 
 }
